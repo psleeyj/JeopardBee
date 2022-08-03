@@ -116,7 +116,7 @@ struct ItemView: View {
     var answer: String
     var body: some View {
         NavigationLink("$\(amount)") {
-            QuestionView(amount: amount, audioFile: audioFile, answer: answer)
+            SpellingView(amount: amount, answer: answer)
         }
         .frame(width: 60, height: 60, alignment: .center)
         .background(.blue)
