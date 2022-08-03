@@ -25,19 +25,14 @@ class SoundManager: ObservableObject {
 
 struct SpellingView: View {
     @StateObject var soundManager = SoundManager()
-    @State private var word = ""
-    @State private var course = ""
-    @State private var description = ""
-    @State private var dueDate = Date()
+    @State private var guess = ""
     @State private var defintion = ""
-    @State private var origin = ""
-    @State private var sentence = ""
-    @State private var speech = ""
     @State private var selectedInfo = ""
     @State private var isSubmitted = false
-    static let infoArray = ["Definition","Language of Origin","Used in a Sentence", "Part of speech"]
     var amount: Int
     var answer: String
+    var audioFile: String
+    var definition: String
     var body: some View {
         VStack {
             HStack {
@@ -52,21 +47,11 @@ struct SpellingView: View {
                         .font(.system(size: 72))
                 }
             }
-//            Picker(selection: $selectedInfo, label: Text("More information")) {
-//                ForEach(Self.infoArray, id: \.self) { selectedInfo in
-//                    Text(selectedInfo)
-//                }
-//            }
-//            .frame(height: 50)
-//            .cornerRadius(16)
-//            .padding([.horizontal], 60)
-//            .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 5))
-//            .padding()
             
             Text("Spell the word!")
                 .font(.system(size: 36))
                 .foregroundColor(.white)
-            CustomTextField(placeholder: "Type here", variable: $word)
+            CustomTextField(placeholder: "Type here", variable: $guess)
                 .autocapitalization(.none)
                 .foregroundColor(.yellow)
                 .padding()
@@ -89,6 +74,7 @@ struct SpellingView: View {
         .background(Color.blue)
     }
 }
+
 struct CustomTextField: View {
     let placeholder : String
     let variable : Binding<String>
@@ -104,9 +90,8 @@ struct CustomTextField: View {
     }
 }
 
-
 struct SpellingView_Previews: PreviewProvider {
     static var previews: some View {
-        SpellingView(amount: 0, answer: "")
+        SpellingView(amount: 0, answer: "", audioFile: "", definition: "")
     }
 }
