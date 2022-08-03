@@ -34,6 +34,7 @@ struct SpellingView: View {
     @State private var sentence = ""
     @State private var speech = ""
     @State private var selectedInfo = ""
+    @State private var isSubmitted = false
     static let infoArray = ["Definition","Language of Origin","Used in a Sentence", "Part of speech"]
     var amount: Int
     var answer: String
@@ -69,16 +70,23 @@ struct SpellingView: View {
                 .autocapitalization(.none)
                 .foregroundColor(.yellow)
                 .padding()
-                .padding(.bottom, 350)
+            Button {
+                self.isSubmitted.toggle()
+            } label: {
+                Text("Submit")
+                    .font(.system(size: 20))
+                    .foregroundColor(.white)
+            }
+            .padding(.bottom, 200)
+            Text("Answer is \(answer)")
+                .font(.system(size: 40))
+                .foregroundColor(.white)
+                .opacity(isSubmitted ? 1 : 0)
+                .padding(.bottom, 200)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
         .accentColor(Color.yellow)
         .background(Color.blue)
-    }
-    func isWon() {
-        if word == "Japan" {
-            
-        }
     }
 }
 struct CustomTextField: View {
@@ -95,6 +103,7 @@ struct CustomTextField: View {
             .padding([.horizontal], 24)
     }
 }
+
 
 struct SpellingView_Previews: PreviewProvider {
     static var previews: some View {
