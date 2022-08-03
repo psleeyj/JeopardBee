@@ -24,14 +24,12 @@ struct ContentView: View {
                 LazyVGrid(columns: Array(repeating: GridItem(.fixed(60), spacing : 20) , count : 5),spacing : 20, content: {
                     ZStack{
                         Color.red
-                        
                             Text("Verb")
                             .font(.system(size: 20))
                             .fontWeight(.heavy)
-                      
-                        NavigationLink( , destination: {verbview()})
                     }
                     .frame(width: 70, height: 50, alignment: .center)
+                    
                     ZStack{
                         Color.red
                         Text("Adjective")
@@ -68,6 +66,7 @@ struct ContentView: View {
                             Text("$100")
                                 .font(.system(size: 20))
                                 .fontWeight(.heavy)
+                            NavigationLink(destination: "x1y1", label: ")
                         }
                         .frame(width: 70, height: 50, alignment: .center)
                     }
