@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AEE172D628985114005D0E0D /* SpellingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE172D528985113005D0E0D /* SpellingView.swift */; };
+		AEE172DB2899F163005D0E0D /* Japan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEE172DA2899F163005D0E0D /* Japan.mp3 */; };
 		D69584E32898251400775641 /* JeopardBeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69584E22898251400775641 /* JeopardBeeApp.swift */; };
 		D69584E52898251400775641 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69584E42898251400775641 /* ContentView.swift */; };
 		D69584E72898251500775641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69584E62898251500775641 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		AEE172D528985113005D0E0D /* SpellingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellingView.swift; sourceTree = "<group>"; };
+		AEE172DA2899F163005D0E0D /* Japan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Japan.mp3; sourceTree = "<group>"; };
 		D69584DF2898251400775641 /* JeopardBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeopardBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69584E22898251400775641 /* JeopardBeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardBeeApp.swift; sourceTree = "<group>"; };
 		D69584E42898251400775641 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AEE172D92899F121005D0E0D /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				AEE172DA2899F163005D0E0D /* Japan.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		D69584D62898251400775641 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 				D69584E22898251400775641 /* JeopardBeeApp.swift */,
 				D69584E42898251400775641 /* ContentView.swift */,
 				AEE172D528985113005D0E0D /* SpellingView.swift */,
+				AEE172D92899F121005D0E0D /* Audio */,
 				D69584E62898251500775641 /* Assets.xcassets */,
 				D69584E82898251500775641 /* Preview Content */,
 			);
@@ -129,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D69584EA2898251500775641 /* Preview Assets.xcassets in Resources */,
+				AEE172DB2899F163005D0E0D /* Japan.mp3 in Resources */,
 				D69584E72898251500775641 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
