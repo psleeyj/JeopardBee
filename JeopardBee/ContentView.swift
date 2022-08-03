@@ -57,9 +57,9 @@ struct ContentView: View {
                         Text("Verb")
                             .font(.system(size: 17))
                             .fontWeight(.heavy)
-                                        }
-                                .frame(width: 60, height: 60, alignment: .center)
-                
+                    }
+                    .frame(width: 60, height: 60, alignment: .center)
+                    
                     ZStack{
                         Color.red
                         Text("Adjective")
@@ -98,11 +98,10 @@ struct ContentView: View {
                 }
                 Spacer()
             }
-                .preferredColorScheme(.dark)
+            .preferredColorScheme(.dark)
         }
     }
-
-
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -132,5 +131,4 @@ struct Item: Identifiable {
     var audioFile: String
     var answer: String
     var definition: String
-}
 }
