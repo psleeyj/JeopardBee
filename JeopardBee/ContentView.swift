@@ -66,7 +66,6 @@ struct ContentView: View {
                             Text("$100")
                                 .font(.system(size: 20))
                                 .fontWeight(.heavy)
-                            NavigationLink(destination: "x1y1", label: ")
                         }
                         .frame(width: 70, height: 50, alignment: .center)
                     }

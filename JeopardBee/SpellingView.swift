@@ -9,12 +9,11 @@ import SwiftUI
 import AVKit
 
 class SoundManager: ObservableObject {
-    
     static let instance = SoundManager()
     var player: AVAudioPlayer?
-    
+    var audioFile: String = ""
     func playSound() {
-        guard let url = Bundle.main.url(forResource: "Japan", withExtension: ".mp3") else { return }
+        guard let url = Bundle.main.url(forResource: "\(audioFile)", withExtension: ".mp3") else { return }
         do {
             player = try AVAudioPlayer(contentsOf: url)
             player?.play()
@@ -30,12 +29,14 @@ struct SpellingView: View {
     @State private var course = ""
     @State private var description = ""
     @State private var dueDate = Date()
-    let defintion = ""
-    let origin = ""
-    let sentence = ""
-    let speech = ""
-//    @State private var selectedInfo = [$defintion, $origin, $sentence, $speech]
+    @State private var defintion = ""
+    @State private var origin = ""
+    @State private var sentence = ""
+    @State private var speech = ""
+    @State private var selectedInfo = ""
     static let infoArray = ["Definition","Language of Origin","Used in a Sentence", "Part of speech"]
+    var amount: Int
+    var answer: String
     var body: some View {
         VStack {
             HStack {
@@ -50,11 +51,11 @@ struct SpellingView: View {
                         .font(.system(size: 72))
                 }
             }
-////            Picker(selection: $selectedInfo, label: Text("More information")) {
-////                ForEach(Self.infoArray, id: \.self) { selectedInfo in
-////                    Text(selectedInfo)
-////                }
-////            }
+//            Picker(selection: $selectedInfo, label: Text("More information")) {
+//                ForEach(Self.infoArray, id: \.self) { selectedInfo in
+//                    Text(selectedInfo)
+//                }
+//            }
 //            .frame(height: 50)
 //            .cornerRadius(16)
 //            .padding([.horizontal], 60)
@@ -97,6 +98,6 @@ struct CustomTextField: View {
 
 struct SpellingView_Previews: PreviewProvider {
     static var previews: some View {
-        SpellingView()
+        SpellingView(amount: 0, answer: "")
     }
 }
