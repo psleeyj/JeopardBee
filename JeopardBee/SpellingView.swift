@@ -22,7 +22,6 @@ class SoundManager: ObservableObject {
             print("Error playing sound. \(error.localizedDescription)")
         }
     }
-    
 }
 
 struct SpellingView: View {
@@ -31,13 +30,15 @@ struct SpellingView: View {
     @State private var course = ""
     @State private var description = ""
     @State private var dueDate = Date()
+    @State private var selectedInfo = ""
+    static let infoArray = ["Definition","Language of Origin","Used in a Sentence", "Part of speech"]
     var body: some View {
         VStack {
             HStack {
                 Text("Listen")
                     .font(.system(size: 50))
                     .foregroundColor(.white)
-        
+                
                 Button {
                     SoundManager.instance.playSound()
                 } label: {
@@ -45,7 +46,16 @@ struct SpellingView: View {
                         .font(.system(size: 72))
                 }
             }
-            .padding(.bottom, 80)
+            //            Picker(selection: $selectedInfo, label: Text("More information")) {
+            //                    ForEach(Self.infoArray, id: \.self) { selectedInfo in
+            //                        Text(selectedInfo)
+            //                    }
+            //                }
+            //            .frame(height: 50)
+            //            .cornerRadius(16)
+            //            .padding([.horizontal], 60)
+            //            .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 5))
+            .padding()
             
             Text("Spell the word!")
                 .font(.system(size: 36))
@@ -54,26 +64,30 @@ struct SpellingView: View {
                 .autocapitalization(.none)
                 .foregroundColor(.yellow)
                 .padding()
-                .padding(.bottom, 400)
+                .padding(.bottom, 350)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
-               .accentColor(Color.yellow)
-               .background(Color.blue)
+        .accentColor(Color.yellow)
+        .background(Color.blue)
+    }
+    func isWon() {
+        if word == "Japan" {
+            
+        }
     }
 }
-
 struct CustomTextField: View {
     let placeholder : String
     let variable : Binding<String>
     var body: some View {
         TextField(placeholder, text: variable)
             .font(.system(size: 30))
-        .frame(height: 80)
-        .textFieldStyle(PlainTextFieldStyle())
-        .padding([.horizontal], 4)
-        .cornerRadius(16)
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 5))
-        .padding([.horizontal], 24)
+            .frame(height: 80)
+            .textFieldStyle(PlainTextFieldStyle())
+            .padding([.horizontal], 4)
+            .cornerRadius(16)
+            .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 5))
+            .padding([.horizontal], 24)
     }
 }
 

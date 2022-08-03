@@ -45,6 +45,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var oneScore = 0
+    @State private var twoScore = 0
     var body: some View {
         VStack {
             Text("Jeopard Bee")
@@ -54,12 +56,12 @@ struct ContentView: View {
             LazyVGrid(columns: Array(repeating: GridItem(.fixed(60), spacing : 20) , count : 5),spacing : 20, content: {
                 
                 ZStack{
-                        Color.blue
-                        Text("Verb")
-                            .font(.system(size: 20))
-                            .fontWeight(.heavy)
-                    }
-                    .frame(width: 70, height: 50, alignment: .center)
+                    Color.blue
+                    Text("Verb")
+                        .font(.system(size: 20))
+                        .fontWeight(.heavy)
+                }
+                .frame(width: 70, height: 50, alignment: .center)
                 ZStack{
                     Color.blue
                     Text("Adjective")
@@ -88,7 +90,7 @@ struct ContentView: View {
                         .fontWeight(.heavy)
                 }
                 .frame(width: 70, height: 50, alignment: .center)
-            
+                
                 
                 ForEach(0..<5){ index in
                     ZStack{
@@ -140,11 +142,15 @@ struct ContentView: View {
                     .frame(width: 70, height: 50, alignment: .center)
                 }
             })
+            
+            HStack {
+            Text("Team one: \(oneScore)")
+            Text("Team two: \(twoScore)")
+            }
         }
         .preferredColorScheme(.dark)
-}
     }
-
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
