@@ -30,7 +30,11 @@ struct SpellingView: View {
     @State private var course = ""
     @State private var description = ""
     @State private var dueDate = Date()
-    @State private var selectedInfo = ""
+    let defintion = ""
+    let origin = ""
+    let sentence = ""
+    let speech = ""
+//    @State private var selectedInfo = [$defintion, $origin, $sentence, $speech]
     static let infoArray = ["Definition","Language of Origin","Used in a Sentence", "Part of speech"]
     var body: some View {
         VStack {
@@ -46,16 +50,16 @@ struct SpellingView: View {
                         .font(.system(size: 72))
                 }
             }
-            //            Picker(selection: $selectedInfo, label: Text("More information")) {
-            //                    ForEach(Self.infoArray, id: \.self) { selectedInfo in
-            //                        Text(selectedInfo)
-            //                    }
-            //                }
-            //            .frame(height: 50)
-            //            .cornerRadius(16)
-            //            .padding([.horizontal], 60)
-            //            .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 5))
-            .padding()
+////            Picker(selection: $selectedInfo, label: Text("More information")) {
+////                ForEach(Self.infoArray, id: \.self) { selectedInfo in
+////                    Text(selectedInfo)
+////                }
+////            }
+//            .frame(height: 50)
+//            .cornerRadius(16)
+//            .padding([.horizontal], 60)
+//            .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 5))
+//            .padding()
             
             Text("Spell the word!")
                 .font(.system(size: 36))
