@@ -10,6 +10,29 @@
 		AEE172D628985114005D0E0D /* SpellingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE172D528985113005D0E0D /* SpellingView.swift */; };
 		AEFD7D9C289B4DAC007C68DE /* Japan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7D9B289B4DAC007C68DE /* Japan.mp3 */; };
 		AEFD7D9E289B4DD5007C68DE /* knot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7D9D289B4DD5007C68DE /* knot.mp3 */; };
+		AEFD7DA0289C2D9A007C68DE /* adduced.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7D9F289C2D9A007C68DE /* adduced.mp3 */; };
+		AEFD7DA2289C2E16007C68DE /* bier.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DA1289C2E16007C68DE /* bier.mp3 */; };
+		AEFD7DA4289C2E1C007C68DE /* bivouac.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DA3289C2E1C007C68DE /* bivouac.mp3 */; };
+		AEFD7DA6289C2E23007C68DE /* Chaucerian.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DA5289C2E23007C68DE /* Chaucerian.mp3 */; };
+		AEFD7DA8289C2E2B007C68DE /* coyote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DA7289C2E2B007C68DE /* coyote.mp3 */; };
+		AEFD7DAA289C2E32007C68DE /* crustacean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DA9289C2E32007C68DE /* crustacean.mp3 */; };
+		AEFD7DAC289C2E3A007C68DE /* dalmatian.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DAB289C2E3A007C68DE /* dalmatian.mp3 */; };
+		AEFD7DAE289C2E43007C68DE /* Des Moines.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DAD289C2E43007C68DE /* Des Moines.mp3 */; };
+		AEFD7DB0289C2E4B007C68DE /* dire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DAF289C2E4B007C68DE /* dire.mp3 */; };
+		AEFD7DB2289C2E52007C68DE /* Edinburgh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DB1289C2E52007C68DE /* Edinburgh.mp3 */; };
+		AEFD7DB4289C2E5A007C68DE /* exerts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DB3289C2E5A007C68DE /* exerts.mp3 */; };
+		AEFD7DB6289C2E61007C68DE /* heirloom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DB5289C2E61007C68DE /* heirloom.mp3 */; };
+		AEFD7DB8289C2E67007C68DE /* impolite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DB7289C2E67007C68DE /* impolite.mp3 */; };
+		AEFD7DBC289C2E83007C68DE /* man-o'-war.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DBB289C2E83007C68DE /* man-o'-war.mp3 */; };
+		AEFD7DBE289C2E8B007C68DE /* mastodon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DBD289C2E8B007C68DE /* mastodon.mp3 */; };
+		AEFD7DC7289C2E9C007C68DE /* topological.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DBF289C2E9B007C68DE /* topological.mp3 */; };
+		AEFD7DC8289C2E9C007C68DE /* Wales.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DC0289C2E9B007C68DE /* Wales.mp3 */; };
+		AEFD7DC9289C2E9C007C68DE /* mousse.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DC1289C2E9C007C68DE /* mousse.mp3 */; };
+		AEFD7DCA289C2E9C007C68DE /* wreaked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DC2289C2E9C007C68DE /* wreaked.mp3 */; };
+		AEFD7DCB289C2E9C007C68DE /* motley.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DC3289C2E9C007C68DE /* motley.mp3 */; };
+		AEFD7DCC289C2E9C007C68DE /* reveal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DC4289C2E9C007C68DE /* reveal.mp3 */; };
+		AEFD7DCD289C2E9C007C68DE /* mete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DC5289C2E9C007C68DE /* mete.mp3 */; };
+		AEFD7DCE289C2E9C007C68DE /* New Hampshire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7DC6289C2E9C007C68DE /* New Hampshire.mp3 */; };
 		D68C34FE289ADE1C0091271F /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C34FD289ADE1C0091271F /* QuestionView.swift */; };
 		D69584E32898251400775641 /* JeopardBeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69584E22898251400775641 /* JeopardBeeApp.swift */; };
 		D69584E52898251400775641 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69584E42898251400775641 /* ContentView.swift */; };
@@ -21,6 +44,29 @@
 		AEE172D528985113005D0E0D /* SpellingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellingView.swift; sourceTree = "<group>"; };
 		AEFD7D9B289B4DAC007C68DE /* Japan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Japan.mp3; path = "../../../../../Downloads/Audio-FinalProject/Japan.mp3"; sourceTree = "<group>"; };
 		AEFD7D9D289B4DD5007C68DE /* knot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = knot.mp3; path = "../../../../../Downloads/Audio-FinalProject/knot.mp3"; sourceTree = "<group>"; };
+		AEFD7D9F289C2D9A007C68DE /* adduced.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = adduced.mp3; sourceTree = "<group>"; };
+		AEFD7DA1289C2E16007C68DE /* bier.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bier.mp3; sourceTree = "<group>"; };
+		AEFD7DA3289C2E1C007C68DE /* bivouac.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bivouac.mp3; sourceTree = "<group>"; };
+		AEFD7DA5289C2E23007C68DE /* Chaucerian.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chaucerian.mp3; sourceTree = "<group>"; };
+		AEFD7DA7289C2E2B007C68DE /* coyote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coyote.mp3; sourceTree = "<group>"; };
+		AEFD7DA9289C2E32007C68DE /* crustacean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crustacean.mp3; sourceTree = "<group>"; };
+		AEFD7DAB289C2E3A007C68DE /* dalmatian.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dalmatian.mp3; sourceTree = "<group>"; };
+		AEFD7DAD289C2E43007C68DE /* Des Moines.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Des Moines.mp3"; sourceTree = "<group>"; };
+		AEFD7DAF289C2E4B007C68DE /* dire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dire.mp3; sourceTree = "<group>"; };
+		AEFD7DB1289C2E52007C68DE /* Edinburgh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Edinburgh.mp3; sourceTree = "<group>"; };
+		AEFD7DB3289C2E5A007C68DE /* exerts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = exerts.mp3; sourceTree = "<group>"; };
+		AEFD7DB5289C2E61007C68DE /* heirloom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heirloom.mp3; sourceTree = "<group>"; };
+		AEFD7DB7289C2E67007C68DE /* impolite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impolite.mp3; sourceTree = "<group>"; };
+		AEFD7DBB289C2E83007C68DE /* man-o'-war.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "man-o'-war.mp3"; sourceTree = "<group>"; };
+		AEFD7DBD289C2E8B007C68DE /* mastodon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mastodon.mp3; sourceTree = "<group>"; };
+		AEFD7DBF289C2E9B007C68DE /* topological.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = topological.mp3; sourceTree = "<group>"; };
+		AEFD7DC0289C2E9B007C68DE /* Wales.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wales.mp3; sourceTree = "<group>"; };
+		AEFD7DC1289C2E9C007C68DE /* mousse.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mousse.mp3; sourceTree = "<group>"; };
+		AEFD7DC2289C2E9C007C68DE /* wreaked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wreaked.mp3; sourceTree = "<group>"; };
+		AEFD7DC3289C2E9C007C68DE /* motley.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = motley.mp3; sourceTree = "<group>"; };
+		AEFD7DC4289C2E9C007C68DE /* reveal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reveal.mp3; sourceTree = "<group>"; };
+		AEFD7DC5289C2E9C007C68DE /* mete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mete.mp3; sourceTree = "<group>"; };
+		AEFD7DC6289C2E9C007C68DE /* New Hampshire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "New Hampshire.mp3"; sourceTree = "<group>"; };
 		D68C34FD289ADE1C0091271F /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		D69584DF2898251400775641 /* JeopardBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeopardBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69584E22898251400775641 /* JeopardBeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardBeeApp.swift; sourceTree = "<group>"; };
@@ -45,6 +91,29 @@
 			children = (
 				AEFD7D9B289B4DAC007C68DE /* Japan.mp3 */,
 				AEFD7D9D289B4DD5007C68DE /* knot.mp3 */,
+				AEFD7D9F289C2D9A007C68DE /* adduced.mp3 */,
+				AEFD7DA1289C2E16007C68DE /* bier.mp3 */,
+				AEFD7DA3289C2E1C007C68DE /* bivouac.mp3 */,
+				AEFD7DA5289C2E23007C68DE /* Chaucerian.mp3 */,
+				AEFD7DA7289C2E2B007C68DE /* coyote.mp3 */,
+				AEFD7DA9289C2E32007C68DE /* crustacean.mp3 */,
+				AEFD7DAB289C2E3A007C68DE /* dalmatian.mp3 */,
+				AEFD7DAD289C2E43007C68DE /* Des Moines.mp3 */,
+				AEFD7DAF289C2E4B007C68DE /* dire.mp3 */,
+				AEFD7DB1289C2E52007C68DE /* Edinburgh.mp3 */,
+				AEFD7DB3289C2E5A007C68DE /* exerts.mp3 */,
+				AEFD7DB5289C2E61007C68DE /* heirloom.mp3 */,
+				AEFD7DB7289C2E67007C68DE /* impolite.mp3 */,
+				AEFD7DBB289C2E83007C68DE /* man-o'-war.mp3 */,
+				AEFD7DBD289C2E8B007C68DE /* mastodon.mp3 */,
+				AEFD7DC5289C2E9C007C68DE /* mete.mp3 */,
+				AEFD7DC3289C2E9C007C68DE /* motley.mp3 */,
+				AEFD7DC1289C2E9C007C68DE /* mousse.mp3 */,
+				AEFD7DC6289C2E9C007C68DE /* New Hampshire.mp3 */,
+				AEFD7DC4289C2E9C007C68DE /* reveal.mp3 */,
+				AEFD7DBF289C2E9B007C68DE /* topological.mp3 */,
+				AEFD7DC0289C2E9B007C68DE /* Wales.mp3 */,
+				AEFD7DC2289C2E9C007C68DE /* wreaked.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -153,10 +222,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFD7DB8289C2E67007C68DE /* impolite.mp3 in Resources */,
+				AEFD7DCE289C2E9C007C68DE /* New Hampshire.mp3 in Resources */,
 				D69584EA2898251500775641 /* Preview Assets.xcassets in Resources */,
+				AEFD7DCB289C2E9C007C68DE /* motley.mp3 in Resources */,
+				AEFD7DC7289C2E9C007C68DE /* topological.mp3 in Resources */,
 				AEFD7D9C289B4DAC007C68DE /* Japan.mp3 in Resources */,
+				AEFD7DBE289C2E8B007C68DE /* mastodon.mp3 in Resources */,
+				AEFD7DA2289C2E16007C68DE /* bier.mp3 in Resources */,
+				AEFD7DA8289C2E2B007C68DE /* coyote.mp3 in Resources */,
 				AEFD7D9E289B4DD5007C68DE /* knot.mp3 in Resources */,
+				AEFD7DB0289C2E4B007C68DE /* dire.mp3 in Resources */,
+				AEFD7DA0289C2D9A007C68DE /* adduced.mp3 in Resources */,
+				AEFD7DA4289C2E1C007C68DE /* bivouac.mp3 in Resources */,
+				AEFD7DAA289C2E32007C68DE /* crustacean.mp3 in Resources */,
+				AEFD7DC8289C2E9C007C68DE /* Wales.mp3 in Resources */,
+				AEFD7DB6289C2E61007C68DE /* heirloom.mp3 in Resources */,
+				AEFD7DB2289C2E52007C68DE /* Edinburgh.mp3 in Resources */,
+				AEFD7DAC289C2E3A007C68DE /* dalmatian.mp3 in Resources */,
 				D69584E72898251500775641 /* Assets.xcassets in Resources */,
+				AEFD7DB4289C2E5A007C68DE /* exerts.mp3 in Resources */,
+				AEFD7DCC289C2E9C007C68DE /* reveal.mp3 in Resources */,
+				AEFD7DA6289C2E23007C68DE /* Chaucerian.mp3 in Resources */,
+				AEFD7DBC289C2E83007C68DE /* man-o'-war.mp3 in Resources */,
+				AEFD7DCA289C2E9C007C68DE /* wreaked.mp3 in Resources */,
+				AEFD7DCD289C2E9C007C68DE /* mete.mp3 in Resources */,
+				AEFD7DC9289C2E9C007C68DE /* mousse.mp3 in Resources */,
+				AEFD7DAE289C2E43007C68DE /* Des Moines.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
