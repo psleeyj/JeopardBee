@@ -23,7 +23,7 @@ struct SpellingView: View {
             HStack {
                 Text("Listen")
                     .font(.system(size: 50))
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                 
                 Button {
                     playSound(audioFile)
@@ -33,10 +33,10 @@ struct SpellingView: View {
                         .foregroundColor(.white)
                 }
             }
-            VStack {
+           VStack {
                 Text("Definition: \(definition)")
-                    .font(.system(size: 30))
-                    .foregroundColor(.black)
+                    .font(.system(size: 20))
+                    .foregroundColor(.white)
                     .padding()
             }
                 Text("Spell the word!")
@@ -67,7 +67,7 @@ struct SpellingView: View {
         }
         .navigationBarHidden(true)
         .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
-        .accentColor(Color.yellow)
+        .accentColor(Color.white)
         .background(Image("Backgroundcomb"))
         
     
