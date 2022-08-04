@@ -8,75 +8,80 @@
 import SwiftUI
 import AVKit
 
-class SoundManager: ObservableObject {
-    static let instance = SoundManager()
-    var player: AVAudioPlayer?
-    var audioFile: String = ""
-    func playSound() {
-        guard let url = Bundle.main.url(forResource: "\(audioFile)", withExtension: ".mp3") else { return }
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            player?.play()
-        } catch let error {
-            print("Error playing sound. \(error.localizedDescription)")
-        }
-    }
-}
-
 struct SpellingView: View {
-    @StateObject var soundManager = SoundManager()
+ //   @ObservedObject var soundManager = SoundManager()
+    @State var audioPlayer: AVAudioPlayer!
     @State private var guess = ""
     @State private var defintion = ""
     @State private var selectedInfo = ""
     @State private var isSubmitted = false
     var amount: Int
     var answer: String
-    var audioFile: String
+    var audioFile: String = ""
     var definition: String
     var body: some View {
-            VStack {
-                HStack {
-                    Text("Listen")
-                        .font(.system(size: 50))
-                        .foregroundColor(.white)
-                    
-                    Button {
-                        SoundManager.instance.playSound()
-                    } label: {
-                        Image(systemName: "speaker.wave.3.fill")
-                            .font(.system(size: 72))
-                    }
-                }
-    
-                Text("Spell the word!")
-                    .font(.system(size: 36))
+        VStack {
+            HStack {
+                Text("Listen")
+                    .font(.system(size: 50))
                     .foregroundColor(.white)
-                CustomTextField(placeholder: "Type here", variable: $guess)
-                    .autocapitalization(.none)
-                    .foregroundColor(.yellow)
-                    .padding()
+                
                 Button {
-                    self.isSubmitted.toggle()
+                    playSound(audioFile)
                 } label: {
-                    Text("Submit")
-                        .font(.system(size: 20))
-                        .foregroundColor(.white)
+                    Image(systemName: "speaker.wave.3.fill")
+                        .font(.system(size: 72))
                 }
+            }
+            VStack {
+                Text("Definition: \(definition)")
+                    .font(.system(size: 20))
+                    .foregroundColor(.white)
+                    .padding()
+            }
+            
+            Text("Spell the word!")
+                .font(.system(size: 36))
+                .foregroundColor(.white)
+            CustomTextField(placeholder: "Type here", variable: $guess)
+                .autocapitalization(.none)
+                .foregroundColor(.yellow)
+                .padding()
+            Button {
+                self.isSubmitted.toggle()
+            } label: {
+                Text("Submit")
+                    .font(.system(size: 20))
+                    .foregroundColor(.white)
+            }
+            .padding(.bottom, 100)
+            Text("Answer is \(answer)")
+                .font(.system(size: 35))
+                .foregroundColor(.white)
+                .opacity(isSubmitted ? 1 : 0)
                 .padding(.bottom, 100)
-                Text("Answer is \(answer)")
-                    .font(.system(size: 35))
-                    .foregroundColor(.white)
-                    .opacity(isSubmitted ? 1 : 0)
-                    .padding(.bottom, 100)
-                NavigationLink("Return home", destination: {ContentView()})
-                    .font(.system(size: 23))
-                    .foregroundColor(.white)
-                }
-        
-            .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
-            .accentColor(Color.yellow)
-            .background(Color.blue)
+            NavigationLink("Return home", destination: {ContentView()})
+                .font(.system(size: 23))
+                .foregroundColor(.white)
         }
+        
+        .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
+        .accentColor(Color.yellow)
+        .background(Color.blue)
+    }
+    
+    func playSound(_ soundFileName : String) {
+        guard let soundURL = Bundle.main.url(forResource: soundFileName, withExtension: ".mp3") else {
+            fatalError("Unable to find \(soundFileName) in bundle")
+        }
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+        } catch {
+            print(error.localizedDescription)
+        }
+        audioPlayer.play()
+    }
 }
 
 struct CustomTextField: View {

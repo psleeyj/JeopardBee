@@ -9,14 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+
     @State private var items = [
-        Item(amount: 100, audioFile: "Japan", answer: "Japan", definition: "country in East Asia."),
+        Item(amount: 100, audioFile: "Japan", answer: "Japan", definition: "a country in East Asia."),
         Item(amount: 100, audioFile: "knot", answer: "knot", definition: "a fastening made by tying a material."),
         Item(amount: 100, audioFile: "impolite", answer: "impolite", definition: "not having good manners."),
         Item(amount: 100, audioFile: "reveal", answer: "reveal", definition: "to make known."),
         Item(amount: 100, audioFile: "coyote", answer: "coyote", definition: "a type of wild dog."),
          
-        Item(amount: 200, audioFile: "Wales", answer: "Wales", definition: "country in Southwest Britain."),
+        Item(amount: 200, audioFile: "Wales", answer: "Wales", definition: "a country in Southwest Britain."),
         Item(amount: 200, audioFile: "heirloom", answer: "heirloom", definition: "an object belonged to a family for generations."),
         Item(amount: 200, audioFile: "dire", answer: "dire", definition: "extremely urgent or serious."),
         Item(amount: 200, audioFile: "exerts", answer: "exerts", definition: "to apply or bring to bear."),
@@ -54,7 +55,15 @@ struct ContentView: View {
                 LazyVGrid(columns: Array(repeating: GridItem(.fixed(60), spacing: 13), count: 5), spacing: 13) {
                     ZStack{
                         Color.red
-                        Text("Verb")
+                        Text("Place")
+                            .font(.system(size: 17))
+                            .fontWeight(.heavy)
+                    }
+                    .frame(width: 60, height: 60, alignment: .center)
+                    
+                    ZStack{
+                        Color.red
+                        Text("Object")
                             .font(.system(size: 17))
                             .fontWeight(.heavy)
                     }
@@ -70,15 +79,7 @@ struct ContentView: View {
                     
                     ZStack{
                         Color.red
-                        Text("Place")
-                            .font(.system(size: 17))
-                            .fontWeight(.heavy)
-                    }
-                    .frame(width: 60, height: 60, alignment: .center)
-                    
-                    ZStack{
-                        Color.red
-                        Text("Object")
+                        Text("Verb")
                             .font(.system(size: 17))
                             .fontWeight(.heavy)
                     }
