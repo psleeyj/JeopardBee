@@ -14,6 +14,8 @@ struct SpellingView: View {
     @State private var guess = ""
     @State private var selectedInfo = ""
     @State private var isSubmitted = false
+    @State private var winMessage = ""
+    @State private var gameOver = false
     var amount: Int
     var answer: String
     var audioFile: String = ""
@@ -49,6 +51,7 @@ struct SpellingView: View {
             
             Button {
                 self.isSubmitted.toggle()
+                isCorrect()
             } label: {
                 Text("Submit")
                     .font(.system(size: 20))
@@ -56,37 +59,38 @@ struct SpellingView: View {
             }
             .padding(.bottom, 150)
             
-           
-            
-            if guess == answer {
-                Text("Answer is \(answer)")
-                    .font(.system(size: 30))
-                    .foregroundColor(.white)
-                    .opacity(isSubmitted ? 1 : 0)
-                    .padding(.bottom, 100)
-                Text("You are correct")
-            }
-            else {
-                Text("Answer is \(answer)")
-                    .font(.system(size: 30))
-                    .foregroundColor(.white)
-                    .opacity(isSubmitted ? 1 : 0)
-                    .padding(.bottom, 100)
-                Text("You are wrong")
-            }
-            
+            Text("Answer is \(answer)")
+                .font(.system(size: 30))
+                .foregroundColor(.white)
+                .opacity(isSubmitted ? 1 : 0)
+                .padding()
+            Text(winMessage)
+                .font(.system(size: 30))
+                .foregroundColor(.yellow)
+                .opacity(isSubmitted ? 1 : 0)
+        
             Button("Return Home") {
                 isSelected = true
             }
             .font(.system(size: 24))
+            .padding()
             
         }
         .navigationBarHidden(true)
         .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
         .accentColor(Color.white)
         .background(Image("Backgroundcomb"))
-        
-        
+    }
+
+    func isCorrect() {
+        if answer == guess {
+            winMessage = "+$\(amount)!"
+            gameOver = true
+        }
+        else {
+            winMessage = "-$\(amount)!"
+            gameOver = true
+        }
     }
     
     func playSound(_ soundFileName : String) {
