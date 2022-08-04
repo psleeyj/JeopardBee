@@ -23,59 +23,61 @@ struct SpellingView: View {
             HStack {
                 Text("Listen")
                     .font(.system(size: 50))
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 
                 Button {
                     playSound(audioFile)
                 } label: {
                     Image(systemName: "speaker.wave.3.fill")
                         .font(.system(size: 72))
+                        .foregroundColor(.white)
                 }
             }
             VStack {
                 Text("Definition: \(definition)")
-                    .font(.system(size: 25))
-                    .foregroundColor(.white)
+                    .font(.system(size: 30))
+                    .foregroundColor(.black)
                     .padding()
             }
-            
-            Text("Spell the word!")
-                .font(.system(size: 36))
-                .foregroundColor(.white)
-            CustomTextField(placeholder: "Type here", variable: $guess)
-                .autocapitalization(.none)
-                .foregroundColor(.yellow)
-                .padding()
-            Button {
-                self.isSubmitted.toggle()
-            } label: {
-                Text("Submit")
-                    .font(.system(size: 20))
+                Text("Spell the word!")
+                    .font(.system(size: 36))
+                    .foregroundColor(.black)
+                CustomTextField(placeholder: "Type here", variable: $guess)
+                    .autocapitalization(.none)
+                    .foregroundColor(.black)
+                    .padding()
+                Button {
+                    self.isSubmitted.toggle()
+                } label: {
+                    Text("Submit")
+                        .font(.system(size: 20))
+                        .foregroundColor(.black)
+                }
+                .padding(.bottom, 150)
+                Text("Answer is \(answer)")
+                    .font(.system(size: 30))
                     .foregroundColor(.white)
-            }
-            .padding(.bottom, 150)
-            Text("Answer is \(answer)")
-                .font(.system(size: 30))
-                .foregroundColor(.white)
-                .opacity(isSubmitted ? 1 : 0)
-                .padding(.bottom, 100)
-            Button("Return Home") {
-                isSelected = true
-            }
-            .font(.system(size: 24))
-            
+                    .opacity(isSubmitted ? 1 : 0)
+                    .padding(.bottom, 100)
+                Button("Return Home") {
+                    isSelected = true
+                }
+                .font(.system(size: 24))
+
         }
         .navigationBarHidden(true)
         .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
         .accentColor(Color.yellow)
-        .background(Color.blue)
+        .background(Image("Backgroundcomb"))
+        
+    
     }
     
     func playSound(_ soundFileName : String) {
         guard let soundURL = Bundle.main.url(forResource: soundFileName, withExtension: ".mp3") else {
             fatalError("Unable to find \(soundFileName) in bundle")
         }
-
+        
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
         } catch {
