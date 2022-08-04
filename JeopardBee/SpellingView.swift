@@ -56,15 +56,17 @@ struct SpellingView: View {
             }
             .padding(.bottom, 100)
             Text("Answer is \(answer)")
-                .font(.system(size: 35))
+                .font(.system(size: 30))
                 .foregroundColor(.white)
                 .opacity(isSubmitted ? 1 : 0)
                 .padding(.bottom, 100)
-            NavigationLink("Return home", destination: {ContentView()})
-                .font(.system(size: 23))
-                .foregroundColor(.white)
+            Button("Return Home") {
+                isSelected = true
+            }
+            .font(.system(size: 24))
+            
         }
-        
+        .navigationBarHidden(true)
         .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
         .accentColor(Color.yellow)
         .background(Color.blue)
@@ -101,7 +103,7 @@ struct CustomTextField: View {
 
 struct SpellingView_Previews: PreviewProvider {
     static var previews: some View {
-        SpellingView(amount: 0, answer: "", audioFile: "", definition: "")
+        SpellingView(isSelected: .constant(true), amount: 0, answer: "", audioFile: "")
     }
 }
 

@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct ContentView: View {
-
     @State private var items = [
         Item(amount: 100, audioFile: "Japan", answer: "Japan", definition: "a country in East Asia."),
         Item(amount: 100, audioFile: "knot", answer: "knot", definition: "a fastening made by tying a material."),
@@ -94,13 +93,15 @@ struct ContentView: View {
                     .frame(width: 60, height: 60, alignment: .center)
                     
                     ForEach(items) { item in
-                        ItemView(amount: item.amount, audioFile: item.audioFile, answer: item.answer, definition: item.definition)
+                        ItemView(amount: item.amount, audioFile: item.audioFile, answer: item.answer)
                     }
                 }
                 Spacer()
             }
             .preferredColorScheme(.dark)
+            
         }
+        .navigationBarHidden(true)
     }
 }
 
@@ -114,16 +115,23 @@ struct ItemView: View {
     var amount: Int
     var audioFile: String
     var answer: String
-    var definition: String
+    @State private var isSelected = false
     var body: some View {
-        NavigationLink("$\(amount)") {
-            SpellingView(amount: amount, answer: answer, audioFile: audioFile, definition: definition)
+        VStack{
+            if isSelected { EmptyView () }
+            else {
+                NavigationLink {
+                    SpellingView(isSelected: $isSelected, amount: amount, answer: answer, audioFile: audioFile)
+                } label: {
+                    Text("$\(amount)")
+                }
+                .frame(width: 60, height: 60, alignment: .center)
+                .background(.blue)
+                .font(.headline)
+                .foregroundColor(.white)
         }
-        .frame(width: 60, height: 60, alignment: .center)
-        .background(.blue)
-        .font(.headline)
-        .foregroundColor(.white)
     }
+}
 }
 
 struct Item: Identifiable {
