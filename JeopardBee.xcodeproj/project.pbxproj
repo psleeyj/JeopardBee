@@ -33,7 +33,6 @@
 		AEFD7E36289C3178007C68DE /* adduced.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7E35289C3178007C68DE /* adduced.mp3 */; };
 		AEFD7E6A289C494C007C68DE /* knot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7E69289C494C007C68DE /* knot.mp3 */; };
 		AEFD7E6C289C4955007C68DE /* Japan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEFD7E6B289C4954007C68DE /* Japan.mp3 */; };
-		D68C34FE289ADE1C0091271F /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C34FD289ADE1C0091271F /* QuestionView.swift */; };
 		D69584E32898251400775641 /* JeopardBeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69584E22898251400775641 /* JeopardBeeApp.swift */; };
 		D69584E52898251400775641 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69584E42898251400775641 /* ContentView.swift */; };
 		D69584E72898251500775641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69584E62898251500775641 /* Assets.xcassets */; };
@@ -67,7 +66,6 @@
 		AEFD7E35289C3178007C68DE /* adduced.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = adduced.mp3; sourceTree = "<group>"; };
 		AEFD7E69289C494C007C68DE /* knot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = knot.mp3; sourceTree = "<group>"; };
 		AEFD7E6B289C4954007C68DE /* Japan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Japan.mp3; sourceTree = "<group>"; };
-		D68C34FD289ADE1C0091271F /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		D69584DF2898251400775641 /* JeopardBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeopardBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69584E22898251400775641 /* JeopardBeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeopardBeeApp.swift; sourceTree = "<group>"; };
 		D69584E42898251400775641 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				D69584E22898251400775641 /* JeopardBeeApp.swift */,
 				D69584E42898251400775641 /* ContentView.swift */,
 				AEE172D528985113005D0E0D /* SpellingView.swift */,
-				D68C34FD289ADE1C0091271F /* QuestionView.swift */,
 				AEE172D92899F121005D0E0D /* Audio */,
 				D69584E62898251500775641 /* Assets.xcassets */,
 				D69584E82898251500775641 /* Preview Content */,
@@ -259,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D68C34FE289ADE1C0091271F /* QuestionView.swift in Sources */,
 				AEE172D628985114005D0E0D /* SpellingView.swift in Sources */,
 				D69584E52898251400775641 /* ContentView.swift in Sources */,
 				D69584E32898251400775641 /* JeopardBeeApp.swift in Sources */,
