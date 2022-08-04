@@ -24,59 +24,71 @@ class SoundManager: ObservableObject {
 }
 
 struct SpellingView: View {
+    @Binding var isSelected: Bool
     @StateObject var soundManager = SoundManager()
     @State private var guess = ""
-    @State private var defintion = ""
+    @State private var definition = ""
     @State private var selectedInfo = ""
     @State private var isSubmitted = false
     var amount: Int
     var answer: String
     var audioFile: String
-    var definition: String
     var body: some View {
-            VStack {
-                HStack {
-                    Text("Listen")
-                        .font(.system(size: 50))
-                        .foregroundColor(.white)
-                    
-                    Button {
-                        SoundManager.instance.playSound()
-                    } label: {
-                        Image(systemName: "speaker.wave.3.fill")
-                            .font(.system(size: 72))
-                    }
-                }
-    
-                Text("Spell the word!")
-                    .font(.system(size: 36))
+        VStack {
+            HStack {
+                Text("Listen")
+                    .font(.system(size: 50))
                     .foregroundColor(.white)
-                CustomTextField(placeholder: "Type here", variable: $guess)
-                    .autocapitalization(.none)
-                    .foregroundColor(.yellow)
-                    .padding()
+                
                 Button {
-                    self.isSubmitted.toggle()
+                    SoundManager.instance.playSound()
                 } label: {
-                    Text("Submit")
-                        .font(.system(size: 20))
-                        .foregroundColor(.white)
+                    Image(systemName: "speaker.wave.3.fill")
+                        .font(.system(size: 72))
                 }
+            }
+            //            Picker(selection: $selectedInfo, label: Text("More information")) {
+            //                ForEach(Self.infoArray, id: \.self) { selectedInfo in
+            //                    Text(selectedInfo)
+            //                }
+            //            }
+            //            .frame(height: 50)
+            //            .cornerRadius(16)
+            //            .padding([.horizontal], 60)
+            //            .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 5))
+            //            .padding()
+            
+            Text("Spell the word!")
+                .font(.system(size: 36))
+                .foregroundColor(.white)
+            CustomTextField(placeholder: "Type here", variable: $guess)
+                .autocapitalization(.none)
+                .foregroundColor(.yellow)
+                .padding()
+            Button {
+                self.isSubmitted.toggle()
+            } label: {
+                Text("Submit")
+                    .font(.system(size: 20))
+                    .foregroundColor(.white)
+            }
+            .padding(.bottom, 100)
+            Text("Answer is \(answer)")
+                .font(.system(size: 30))
+                .foregroundColor(.white)
+                .opacity(isSubmitted ? 1 : 0)
                 .padding(.bottom, 100)
-                Text("Answer is \(answer)")
-                    .font(.system(size: 35))
-                    .foregroundColor(.white)
-                    .opacity(isSubmitted ? 1 : 0)
-                    .padding(.bottom, 100)
-                NavigationLink("Return home", destination: {ContentView()})
-                    .font(.system(size: 23))
-                    .foregroundColor(.white)
-                }
-        
-            .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
-            .accentColor(Color.yellow)
-            .background(Color.blue)
+            Button("Return Home") {
+                isSelected = true
+            }
+            .font(.system(size: 24))
+            
         }
+        .navigationBarHidden(true)
+        .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
+        .accentColor(Color.yellow)
+        .background(Color.blue)
+    }
 }
 
 struct CustomTextField: View {
@@ -96,7 +108,7 @@ struct CustomTextField: View {
 
 struct SpellingView_Previews: PreviewProvider {
     static var previews: some View {
-        SpellingView(amount: 0, answer: "", audioFile: "", definition: "")
+        SpellingView(isSelected: .constant(true), amount: 0, answer: "", audioFile: "")
     }
 }
 
