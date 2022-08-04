@@ -22,7 +22,7 @@ struct SpellingView: View {
         VStack {
             HStack {
                 Text("Listen")
-                    .font(.system(size: 50))
+                    .font(.system(size: 45))
                     .foregroundColor(.black)
                 
                 Button {
@@ -39,38 +39,54 @@ struct SpellingView: View {
                     .foregroundColor(.black)
                     .padding()
             }
-                Text("Spell the word!")
-                    .font(.system(size: 36))
+            Text("Spell the word!")
+                .font(.system(size: 36))
+                .foregroundColor(.black)
+            CustomTextField(placeholder: "Type here", variable: $guess)
+                .autocapitalization(.none)
+                .foregroundColor(.black)
+                .padding()
+            
+            Button {
+                self.isSubmitted.toggle()
+            } label: {
+                Text("Submit")
+                    .font(.system(size: 20))
                     .foregroundColor(.black)
-                CustomTextField(placeholder: "Type here", variable: $guess)
-                    .autocapitalization(.none)
-                    .foregroundColor(.black)
-                    .padding()
-                Button {
-                    self.isSubmitted.toggle()
-                } label: {
-                    Text("Submit")
-                        .font(.system(size: 20))
-                        .foregroundColor(.black)
-                }
-                .padding(.bottom, 150)
+            }
+            .padding(.bottom, 150)
+            
+           
+            
+            if guess == answer {
                 Text("Answer is \(answer)")
                     .font(.system(size: 30))
                     .foregroundColor(.white)
                     .opacity(isSubmitted ? 1 : 0)
                     .padding(.bottom, 100)
-                Button("Return Home") {
-                    isSelected = true
-                }
-                .font(.system(size: 24))
-
+                Text("You are correct")
+            }
+            else {
+                Text("Answer is \(answer)")
+                    .font(.system(size: 30))
+                    .foregroundColor(.white)
+                    .opacity(isSubmitted ? 1 : 0)
+                    .padding(.bottom, 100)
+                Text("You are wrong")
+            }
+            
+            Button("Return Home") {
+                isSelected = true
+            }
+            .font(.system(size: 24))
+            
         }
         .navigationBarHidden(true)
         .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
         .accentColor(Color.yellow)
         .background(Image("Backgroundcomb"))
         
-    
+        
     }
     
     func playSound(_ soundFileName : String) {
