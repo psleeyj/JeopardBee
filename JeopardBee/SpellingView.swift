@@ -12,13 +12,12 @@ struct SpellingView: View {
     @Binding var isSelected: Bool
     @State var audioPlayer: AVAudioPlayer!
     @State private var guess = ""
-    @State private var definition = ""
     @State private var selectedInfo = ""
     @State private var isSubmitted = false
     var amount: Int
     var answer: String
     var audioFile: String = ""
-    var definition: String
+    var definition: String = ""
     var body: some View {
         VStack {
             HStack {
