@@ -93,7 +93,7 @@ struct ContentView: View {
                     .frame(width: 60, height: 60, alignment: .center)
                     
                     ForEach(items) { item in
-                        ItemView(amount: item.amount, audioFile: item.audioFile, answer: item.answer)
+                        ItemView(amount: item.amount, audioFile: item.audioFile, answer: item.answer, definition: item.definition)
                     }
                 }
                 Spacer()
@@ -115,13 +115,14 @@ struct ItemView: View {
     var amount: Int
     var audioFile: String
     var answer: String
+    var definition: String
     @State private var isSelected = false
     var body: some View {
         VStack{
             if isSelected { EmptyView () }
             else {
                 NavigationLink {
-                    SpellingView(isSelected: $isSelected, amount: amount, answer: answer, audioFile: audioFile)
+                    SpellingView(isSelected: $isSelected, amount: amount, answer: answer, audioFile: audioFile, definition: definition)
                 } label: {
                     Text("$\(amount)")
                 }

@@ -9,10 +9,10 @@ import SwiftUI
 import AVKit
 
 struct SpellingView: View {
- //   @ObservedObject var soundManager = SoundManager()
+    @Binding var isSelected: Bool
     @State var audioPlayer: AVAudioPlayer!
     @State private var guess = ""
-    @State private var defintion = ""
+    @State private var definition = ""
     @State private var selectedInfo = ""
     @State private var isSubmitted = false
     var amount: Int
@@ -103,7 +103,7 @@ struct CustomTextField: View {
 
 struct SpellingView_Previews: PreviewProvider {
     static var previews: some View {
-        SpellingView(isSelected: .constant(true), amount: 0, answer: "", audioFile: "")
+        SpellingView(isSelected: .constant(true), amount: 0, answer: "", audioFile: "", definition: "")
     }
 }
 
