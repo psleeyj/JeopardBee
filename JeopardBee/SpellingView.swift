@@ -34,7 +34,7 @@ struct SpellingView: View {
             }
             VStack {
                 Text("Definition: \(definition)")
-                    .font(.system(size: 20))
+                    .font(.system(size: 25))
                     .foregroundColor(.white)
                     .padding()
             }
@@ -53,7 +53,7 @@ struct SpellingView: View {
                     .font(.system(size: 20))
                     .foregroundColor(.white)
             }
-            .padding(.bottom, 100)
+            .padding(.bottom, 150)
             Text("Answer is \(answer)")
                 .font(.system(size: 30))
                 .foregroundColor(.white)
