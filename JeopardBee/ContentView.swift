@@ -40,7 +40,7 @@ struct ContentView: View {
         Item(amount: 500, audioFile: "bivouac", answer: "bivouac", definition: "an encampment under little or no shelter."),
         Item(amount: 500, audioFile: "Chaucerian", answer: "Chaucerian", definition: "of, relating to, or resembling an English medieval writer."),
         Item(amount: 500, audioFile: "mete", answer: "mete", definition: "to deal out: to allot, apportion."),
-        Item(amount: 500, audioFile: "man-o'-war", answer: "man-o'-war", definition: "a marine hydrozoan found in the Atlantic Ocean and the Indian Ocean.")]
+        Item(amount: 500, audioFile: "man-o'-war", answer: "man-o-war", definition: "a marine hydrozoan found in the Atlantic Ocean and the Indian Ocean.")]
     
     var body: some View {
         NavigationView {
@@ -99,15 +99,43 @@ struct ContentView: View {
                     }
                 }
                 Spacer()
-                HStack {
-                    Text("Team One: \(scoreOne)")
-                        .font(.system(size: 20))
-                        .foregroundColor(.yellow)
-                        .padding()
-                    Text("Team Two: \(scoreTwo)")
-                        .font(.system(size: 20))
-                        .foregroundColor(.yellow)
-                        .padding()
+                HStack(spacing: 35) {
+                    HStack {
+                        Text("Team One: $\(scoreOne)")
+                            .font(.system(size: 18))
+                            .foregroundColor(.yellow)
+                            .fontWeight(.bold)
+                        VStack(spacing: -10) {
+                            Text("+")
+                                .font(.system(size: 35))
+                                .onTapGesture {
+                                    scoreOne += 100
+                                }
+                            Text("-")
+                                .font(.system(size: 40))
+                                .onTapGesture {
+                                    scoreOne -= 100
+                                }
+                        }
+                    }
+                    HStack {
+                        Text("Team Two: $\(scoreTwo)")
+                            .font(.system(size: 18))
+                            .foregroundColor(.red)
+                            .fontWeight(.bold)
+                        VStack(spacing: -10) {
+                            Text("+")
+                                .font(.system(size: 35))
+                                .onTapGesture {
+                                    scoreTwo += 100
+                                }
+                            Text("-")
+                                .font(.system(size: 40))
+                                .onTapGesture {
+                                    scoreTwo -= 100
+                                }
+                        }
+                    }
                 }
             }
             .preferredColorScheme(.dark)

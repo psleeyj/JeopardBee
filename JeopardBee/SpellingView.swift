@@ -12,10 +12,8 @@ struct SpellingView: View {
     @Binding var isSelected: Bool
     @State var audioPlayer: AVAudioPlayer!
     @State private var guess = ""
-    @State private var selectedInfo = ""
     @State private var isSubmitted = false
     @State private var winMessage = ""
-    @State private var gameOver = false
     var amount: Int
     var answer: String
     var audioFile: String = ""
@@ -25,50 +23,52 @@ struct SpellingView: View {
             HStack {
                 Text("Listen")
                     .font(.system(size: 45))
-                    .foregroundColor(.black)
+                    .foregroundColor(.yellow)
                 
                 Button {
                     playSound(audioFile)
                 } label: {
                     Image(systemName: "speaker.wave.3.fill")
                         .font(.system(size: 72))
-                        .foregroundColor(.white)
+                        .foregroundColor(.yellow)
                 }
             }
-           VStack {
+            VStack {
                 Text("Definition: \(definition)")
-                    .font(.system(size: 20))
-                    .foregroundColor(.white)
+                    .font(.system(size: 25))
+                    .foregroundColor(.yellow)
                     .padding()
             }
             Text("Spell the word!")
                 .font(.system(size: 36))
-                .foregroundColor(.black)
+                .foregroundColor(.white)
             CustomTextField(placeholder: "Type here", variable: $guess)
                 .autocapitalization(.none)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
                 .padding()
             
             Button {
-                self.isSubmitted.toggle()
                 isCorrect()
+                self.isSubmitted.toggle()
             } label: {
                 Text("Submit")
                     .font(.system(size: 20))
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
             }
             .padding(.bottom, 150)
             
             Text("Answer is \(answer)")
-                .font(.system(size: 30))
-                .foregroundColor(.white)
+                .font(.system(size: 25))
+                .foregroundColor(.black)
+                .fontWeight(.bold)
                 .opacity(isSubmitted ? 1 : 0)
                 .padding()
             Text(winMessage)
-                .font(.system(size: 30))
-                .foregroundColor(.yellow)
+                .font(.system(size: 25))
+                .foregroundColor(.black)
+                .fontWeight(.bold)
                 .opacity(isSubmitted ? 1 : 0)
-        
+            
             Button("Return Home") {
                 isSelected = true
             }
@@ -81,15 +81,14 @@ struct SpellingView: View {
         .accentColor(Color.white)
         .background(Image("Backgroundcomb"))
     }
-
+    
     func isCorrect() {
         if answer == guess {
             winMessage = "+$\(amount)!"
-            gameOver = true
         }
         else {
             winMessage = "-$\(amount)!"
-            gameOver = true
+            
         }
     }
     
