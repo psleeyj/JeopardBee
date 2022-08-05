@@ -40,7 +40,7 @@ struct ContentView: View {
         Item(amount: 500, audioFile: "bivouac", answer: "bivouac", definition: "an encampment under little or no shelter."),
         Item(amount: 500, audioFile: "Chaucerian", answer: "Chaucerian", definition: "of, relating to, or resembling an English medieval writer."),
         Item(amount: 500, audioFile: "mete", answer: "mete", definition: "to deal out: to allot, apportion."),
-        Item(amount: 500, audioFile: "man-o'-war", answer: "man-o'-war", definition: "a marine hydrozoan found in the Atlantic Ocean and the Indian Ocean.")]
+        Item(amount: 500, audioFile: "man-o'-war", answer: "man-o-war", definition: "a marine hydrozoan found in the Atlantic Ocean and the Indian Ocean.")]
     
     var body: some View {
         NavigationView {
