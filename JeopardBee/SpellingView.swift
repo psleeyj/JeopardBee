@@ -12,7 +12,6 @@ struct SpellingView: View {
     @Binding var isSelected: Bool
     @State var audioPlayer: AVAudioPlayer!
     @State private var guess = ""
-    @State private var selectedInfo = ""
     @State private var isSubmitted = false
     @State private var winMessage = ""
     var amount: Int
